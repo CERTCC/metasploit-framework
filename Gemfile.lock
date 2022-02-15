@@ -355,7 +355,7 @@ GEM
       rex-core
       rex-struct2
       rex-text
-    rex-core (0.1.25)
+    rex-core (0.1.26)
     rex-encoder (0.1.6)
       metasm
       rex-arch
@@ -436,7 +436,7 @@ GEM
     ruby-progressbar (1.11.0)
     ruby-rc4 (0.1.5)
     ruby2_keywords (0.0.5)
-    ruby_smb (3.0.2)
+    ruby_smb (3.0.4)
       bindata
       openssl-ccm
       openssl-cmac
