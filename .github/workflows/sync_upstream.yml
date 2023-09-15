@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{secrets.VUL_DRILLER_TOKEN}}
+          token: ${{ secrets.VUL_DRILLER_TOKEN }}
       - name: config
         run: |
           git config --global user.name 'certcc-ghbot'
