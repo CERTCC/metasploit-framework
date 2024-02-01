@@ -9,20 +9,14 @@ jobs:
   merge:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
+          fetch-depth: 100 
           token: ${{ secrets.VUL_DRILLER_TOKEN }}
       - name: config
         run: |
           git config --global user.name 'certcc-ghbot'
           git config --global user.email 'cert+ghbot@cert.org'
-      - name: pull
-        run: |
-          # "git checkout master" is unnecessary, already here by default
-          git pull --unshallow  # this option is very important, you would get
-                                # complains about unrelated histories without it.
-                                # (but actions/checkout@v2 can also be instructed
-                                # to fetch all git depth right from the start)
       - name: fetch upstream
         run: |
           git remote add upstream ${{ vars.UPSTREAM_URL }}
