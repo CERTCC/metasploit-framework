@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    metasploit-framework (6.3.56)
+    metasploit-framework (6.3.57)
       actionpack (~> 7.0.0)
       activerecord (~> 7.0.0)
       activesupport (~> 7.0.0)
@@ -419,7 +419,7 @@ GEM
       metasm
       rex-core
       rex-text
-    rex-socket (0.1.55)
+    rex-socket (0.1.56)
       rex-core
     rex-sslscan (0.1.10)
       rex-core
