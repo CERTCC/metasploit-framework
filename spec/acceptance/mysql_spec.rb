@@ -15,7 +15,7 @@ RSpec.describe 'MySQL sessions and MySQL modules' do
           global: {},
           module: {
             username: ENV.fetch('MYSQL_USERNAME', 'root'),
-            password: ENV.fetch('MYSQL_ROOT_PASSWORD', 'password'),
+            password: ENV.fetch('MYSQL_PASSWORD', 'password'),
             rhost: ENV.fetch('MYSQL_RHOST', '127.0.0.1'),
             rport: ENV.fetch('MYSQL_RPORT', '3306'),
           }
