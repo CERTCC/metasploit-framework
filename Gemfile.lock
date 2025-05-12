@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    metasploit-framework (6.4.63)
+    metasploit-framework (6.4.64)
       aarch64
       abbrev
       actionpack (~> 7.1.0)
@@ -479,7 +479,7 @@ GEM
     rex-socket (0.1.61)
       dnsruby
       rex-core
-    rex-sslscan (0.1.12)
+    rex-sslscan (0.1.13)
       rex-core
       rex-socket
       rex-text
@@ -531,7 +531,7 @@ GEM
       parser (>= 3.3.1.0)
     ruby-macho (4.1.0)
     ruby-mysql (4.2.0)
-    ruby-prof (1.4.2)
+    ruby-prof (1.7.1)
     ruby-progressbar (1.13.0)
     ruby-rc4 (0.1.5)
     ruby2_keywords (0.0.5)
@@ -624,7 +624,7 @@ DEPENDENCIES
   rspec-rails
   rspec-rerun
   rubocop (= 1.67.0)
-  ruby-prof (= 1.4.2)
+  ruby-prof
   simplecov (= 0.18.2)
   test-prof
   timecop
