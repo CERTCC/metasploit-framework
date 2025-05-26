@@ -152,7 +152,19 @@ Style/RedundantAssignment:
     and return expression
   Enabled: false
 
+Style/RedundantRegexpArgument:
+  Enabled: true
+  Exclude:
+  # We aren't ready to enable this for modules yet
+    - 'modules/**/*'
+
 Style/SwapValues:
+  Enabled: false
+
+Layout/LineContinuationLeadingSpace:
+  Description: >-
+    Disabled as it sometimes improves the readability of code having leading spaces
+    for indented code strings.
   Enabled: false
 
 Layout/ModuleHashOnNewLine:
