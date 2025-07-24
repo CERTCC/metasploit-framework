@@ -59,7 +59,7 @@ Gem::Specification.new do |spec|
   # Needed for Javascript obfuscation
   spec.add_runtime_dependency 'jsobfu'
   # Needed for some admin modules (scrutinizer_add_user.rb)
-  spec.add_runtime_dependency 'json'
+  spec.add_runtime_dependency 'json', '2.10.2' # Pinned https://github.com/ruby/json/issues/827
   # Metasm compiler/decompiler/assembler
   spec.add_runtime_dependency 'metasm'
   # Needed for aarch64 assembler support - as Metasm does not currently support Aarch64 fully
@@ -108,8 +108,9 @@ Gem::Specification.new do |spec|
   # Required for Metasploit Web Services
   spec.add_runtime_dependency 'puma'
   spec.add_runtime_dependency 'ruby-mysql'
-  spec.add_runtime_dependency 'thin'
-  spec.add_runtime_dependency 'sinatra'
+  spec.add_runtime_dependency 'thin', '~> 1.8' # Additional dev cycles required to update thin/sinatra/etc to a major version
+  spec.add_runtime_dependency 'sinatra', '~> 3.2'
+  spec.add_runtime_dependency 'rack', '~> 2.2'
   spec.add_runtime_dependency 'warden'
   spec.add_runtime_dependency 'swagger-blocks'
   # Required for JSON-RPC client
