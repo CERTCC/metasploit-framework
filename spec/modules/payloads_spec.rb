@@ -516,6 +516,22 @@ RSpec.describe 'modules/payloads', :content do
                           reference_name: 'cmd/linux/http/mips64'
   end
 
+  context 'cmd/linux/http/riscv32le' do
+    it_should_behave_like 'payload is not cached',
+                          ancestor_reference_names: [
+                            'adapters/cmd/linux/http/riscv32le'
+                          ],
+                          reference_name: 'cmd/linux/http/riscv32le'
+  end
+
+  context 'cmd/linux/http/riscv64le' do
+    it_should_behave_like 'payload is not cached',
+                          ancestor_reference_names: [
+                            'adapters/cmd/linux/http/riscv64le'
+                          ],
+                          reference_name: 'cmd/linux/http/riscv64le'
+  end
+
   context 'cmd/linux/https/mips64' do
     it_should_behave_like 'payload is not cached',
                           ancestor_reference_names: [
@@ -677,6 +693,22 @@ RSpec.describe 'modules/payloads', :content do
                           reference_name: 'cmd/linux/tftp/mipsle'
   end
 
+  context 'cmd/linux/https/riscv32le' do
+    it_should_behave_like 'payload is not cached',
+                          ancestor_reference_names: [
+                            'adapters/cmd/linux/https/riscv32le'
+                          ],
+                          reference_name: 'cmd/linux/https/riscv32le'
+  end
+
+  context 'cmd/linux/https/riscv64le' do
+    it_should_behave_like 'payload is not cached',
+                          ancestor_reference_names: [
+                            'adapters/cmd/linux/https/riscv64le'
+                          ],
+                          reference_name: 'cmd/linux/https/riscv64le'
+  end
+
   context 'cmd/linux/http/ppc' do
     it_should_behave_like 'payload is not cached',
                           ancestor_reference_names: [
@@ -747,6 +779,22 @@ RSpec.describe 'modules/payloads', :content do
                             'adapters/cmd/linux/tftp/ppc64le'
                           ],
                           reference_name: 'cmd/linux/tftp/ppc64le'
+  end
+
+  context 'cmd/linux/tftp/riscv32le' do
+    it_should_behave_like 'payload is not cached',
+                          ancestor_reference_names: [
+                            'adapters/cmd/linux/tftp/riscv32le'
+                          ],
+                          reference_name: 'cmd/linux/tftp/riscv32le'
+  end
+
+  context 'cmd/linux/tftp/riscv64le' do
+    it_should_behave_like 'payload is not cached',
+                          ancestor_reference_names: [
+                            'adapters/cmd/linux/tftp/riscv64le'
+                          ],
+                          reference_name: 'cmd/linux/tftp/riscv64le'
   end
 
   context 'cmd/linux/http/x86' do
@@ -2085,6 +2133,16 @@ RSpec.describe 'modules/payloads', :content do
                           reference_name: 'linux/riscv32le/reboot'
   end
 
+  context 'linux/riscv32le/shell_bind_tcp' do
+    it_should_behave_like 'payload cached size is consistent',
+                          ancestor_reference_names: [
+                              'singles/linux/riscv32le/shell_bind_tcp'
+                          ],
+                          dynamic_size: false,
+                          modules_pathname: modules_pathname,
+                          reference_name: 'linux/riscv32le/shell_bind_tcp'
+  end
+
   context 'linux/riscv32le/shell_reverse_tcp' do
     it_should_behave_like 'payload cached size is consistent',
                           ancestor_reference_names: [
@@ -2123,6 +2181,16 @@ RSpec.describe 'modules/payloads', :content do
                           dynamic_size: false,
                           modules_pathname: modules_pathname,
                           reference_name: 'linux/riscv64le/reboot'
+  end
+
+  context 'linux/riscv64le/shell_bind_tcp' do
+    it_should_behave_like 'payload cached size is consistent',
+                          ancestor_reference_names: [
+                              'singles/linux/riscv64le/shell_bind_tcp'
+                          ],
+                          dynamic_size: false,
+                          modules_pathname: modules_pathname,
+                          reference_name: 'linux/riscv64le/shell_bind_tcp'
   end
 
   context 'linux/riscv64le/shell_reverse_tcp' do
