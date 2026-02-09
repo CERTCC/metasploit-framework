@@ -331,7 +331,7 @@ GEM
       mutex_m
       railties (~> 7.0)
       zeitwerk
-    metasploit-credential (6.0.19)
+    metasploit-credential (6.0.20)
       bigdecimal
       csv
       drb
