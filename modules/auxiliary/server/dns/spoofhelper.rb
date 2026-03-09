@@ -54,7 +54,7 @@ class MetasploitModule < Msf::Auxiliary
 
     @sock = ::UDPSocket.new
     @sock.setsockopt(::Socket::SOL_SOCKET, ::Socket::SO_REUSEADDR, 1)
-    @sock.bind(srvhost, @port)
+    @sock.bind(datastore['SRVHOST'], @port)
     @run = true
 
     while @run

@@ -37,7 +37,7 @@ class MetasploitModule < Msf::Auxiliary
   end
 
   def srvhost
-    srvhost || '0.0.0.0'
+    datastore['SRVHOST'] || '0.0.0.0'
   end
 
   def srvport

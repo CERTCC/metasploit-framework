@@ -100,7 +100,7 @@ class MetasploitModule < Msf::Auxiliary
     fake_host = datastore['FAKEHOST'] || datastore['HOST']
     fake_port = datastore['FAKEPORT'] || datastore['PORT']
     host = datastore['HOST']
-    local_host = srvhost
+    local_host = datastore['SRVHOST']
     local_port = datastore['SRVPORT']
     port = datastore['PORT']
 

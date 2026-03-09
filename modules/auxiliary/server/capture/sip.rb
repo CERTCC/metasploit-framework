@@ -139,12 +139,12 @@ class MetasploitModule < Msf::Auxiliary
   def run
     @port = datastore['SRVPORT'].to_i
     @sock = Rex::Socket::Udp.create(
-      'LocalHost' => srvhost,
+      'LocalHost' => datastore['SRVHOST'],
       'LocalPort' => @port,
       'Context' => { 'Msf' => framework, 'MsfExploit' => self }
     )
     @run = true
-    server_ip = sip_sanitize_address(srvhost)
+    server_ip = sip_sanitize_address(datastore['SRVHOST'])
 
     while @run
       res = @sock.recvfrom
