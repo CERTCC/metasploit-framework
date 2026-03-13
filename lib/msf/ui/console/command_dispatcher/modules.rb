@@ -1104,7 +1104,7 @@ module Msf
               wlog(log_msg)
             end
 
-            self.driver.run_single('reload')
+            self.driver.run_single('reload') if self.driver.active_module
             self.driver.run_single("banner")
           end
 
